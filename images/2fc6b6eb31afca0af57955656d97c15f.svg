@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="480" viewBox="0 0 680 480" role="img">
+  <title>拉伸试验的工程应力-应变曲线</title>
+  <desc>典型韧性金属的工程应力-应变曲线，标注弹性模量 E、屈服强度、抗拉强度、均匀延伸率、断裂点和延伸率。亮色线条，透明背景。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#E8E6DF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text { font-family: "Noto Sans CJK SC", "Source Han Sans SC", "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif; }
+      .t  { font-size: 14px; fill: #F1EFE8; }
+      .ts { font-size: 12px; fill: #E8E6DF; }
+      .tr { font-size: 12px; fill: #D3D1C7; }
+      .sub { font-size: 11px; }
+      .guide { stroke: #B4B2A9; stroke-width: 0.8; stroke-dasharray: 4 4; fill: none; }
+    </style>
+  </defs>
+
+  <!-- axes -->
+  <line x1="90" y1="400" x2="640" y2="400" stroke="#E8E6DF" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="90" y1="400" x2="90" y2="40" stroke="#E8E6DF" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text class="t" x="100" y="48">σ 应力（MPa）</text>
+  <text class="t" x="632" y="418" text-anchor="end">ε 应变</text>
+
+  <!-- region labels -->
+  <text class="tr" x="120" y="66" text-anchor="middle">弹性区</text>
+  <text class="tr" x="278" y="66" text-anchor="middle">均匀塑性变形（应变硬化）</text>
+  <text class="tr" x="480" y="66" text-anchor="middle">颈缩</text>
+
+  <!-- guide lines: yield point (167,163) is the intersection of the 0.2% offset line with the curve -->
+  <line class="guide" x1="167" y1="163" x2="167" y2="400"/>
+  <line class="guide" x1="400" y1="100" x2="400" y2="400"/>
+  <line class="guide" x1="90" y1="163" x2="167" y2="163"/>
+  <line class="guide" x1="90" y1="100" x2="400" y2="100"/>
+  <line class="guide" x1="102" y1="400" x2="167" y2="163"/>
+  <line class="guide" x1="560" y1="170" x2="622" y2="400"/>
+  <line class="guide" x1="118" y1="297" x2="166" y2="300"/>
+  <line class="guide" x1="167" y1="163" x2="182" y2="212"/>
+
+  <!-- stress-strain curve -->
+  <path d="M90 400 L150 180 C200 120 300 100 400 100 C470 100 520 135 560 170"
+        fill="none" stroke="#85B7EB" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- characteristic points -->
+  <circle cx="167" cy="163" r="4" fill="#FAC775"/>
+  <circle cx="400" cy="100" r="4" fill="#FAC775"/>
+  <circle cx="560" cy="170" r="4" fill="#F0997B"/>
+
+  <!-- y-axis symbols -->
+  <text class="t" x="82" y="163" text-anchor="end" dominant-baseline="central">σ<tspan class="sub" dy="3">y</tspan></text>
+  <text class="t" x="82" y="100" text-anchor="end" dominant-baseline="central">σ<tspan class="sub" dy="3">UTS</tspan></text>
+
+  <!-- annotations -->
+  <text class="ts" x="170" y="304">斜率 = E（弹性模量）</text>
+  <text class="ts" x="186" y="216">屈服强度 σ<tspan class="sub" dy="3">y</tspan><tspan dy="-3">（0.2 % 偏移法，σ</tspan><tspan class="sub" dy="3">0.2</tspan><tspan dy="-3">）</tspan></text>
+  <text class="ts" x="412" y="86">σ<tspan class="sub" dy="3">UTS</tspan><tspan dy="-3"> 抗拉强度（曲线最高点）</tspan></text>
+  <text class="ts" x="572" y="174" fill="#F5C4B3">断裂点</text>
+  <text class="ts" x="400" y="418" text-anchor="middle">ε<tspan class="sub" dy="3">u</tspan></text>
+
+  <!-- elongation bracket -->
+  <line x1="90" y1="436" x2="622" y2="436" stroke="#D3D1C7" stroke-width="0.8"/>
+  <line x1="90" y1="431" x2="90" y2="441" stroke="#D3D1C7" stroke-width="0.8"/>
+  <line x1="622" y1="431" x2="622" y2="441" stroke="#D3D1C7" stroke-width="0.8"/>
+  <text class="ts" x="356" y="456" text-anchor="middle">延伸率 δ（断后塑性应变；虚线为断裂后卸载的弹性回复）</text>
+</svg>
